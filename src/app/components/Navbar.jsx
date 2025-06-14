@@ -15,7 +15,7 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-background">
+    <Disclosure as="nav" className="fixed top-0 left-0 w-full bg-background z-50">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -35,7 +35,7 @@ export default function Navbar() {
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
-                    className={'rounded-md px-3 py-2 text-sm font-medium'}
+                    className={'rounded-md px-3 py-2 text-lg'}
                   >
                     {item.name}
                   </a>
@@ -45,6 +45,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      
 
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pt-2 pb-3">
