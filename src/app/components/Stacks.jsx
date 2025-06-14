@@ -2,32 +2,41 @@
 
 import { useState } from "react";
 import stack from "../stack.js"
+import { MenuItems } from "@headlessui/react";
+
+function getTechStack(selectedStack) {
+  console.log(selectedStack)
+  const array = stack.tech_stack[selectedStack];
+  console.log('hi',array)
+  return array.map((tech) => (
+    <div
+      key={tech[0]}
+      className="block max-w-sm h-32 bg-gray-700 rounded-xl"
+    >
+      <img className="w-16 h-16 object-contain mx-auto mt-4" src={tech[1]} alt={tech[0]} />
+      <p>{tech[0]}</p>
+    </div>
+  ));
+}
 
 export default function Stacks() {
-  const [stacks, setStacks] = useState(getTechStack);
+  const [stacks, setStacks] = useState(getTechStack('Frontend'));
 
-  function getTechStack(selectedStack) {
-    selectedStack = 'frontend'
-    const array = stack.tech_stack.frontend
-    console.log('hi',array)
-
-    const retStack = array.map((tech) => {
-      console.log(tech[0])
-      return (
-        <div
-          key={tech[0]}
-          className="block max-w-sm h-32 border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
-          <img className="w-16 h-16 object-contain mx-auto mt-4" src={tech[1]}></img>
-          <p>{tech[0]}</p>
-        </div>
-      )
-    })
-
-    return retStack;
+  function handleStackChange(selectedStack) {
+    console.log(selectedStack)
+    setStacks(getTechStack(selectedStack));
   }
 
-  // getTechStack()
+  const menuItems= ['Frontend','Backend','Database','Others']
+
+  const stackMenu = menuItems.map((item) => {
+    return (
+      <div key={item} onClick={() => handleStackChange(item)}className="h-8 bg-gray-700 hover:bg-gray-400 rounded-xl">
+        <a className="text-md sm:text-xl">{item}</a>
+      </div>
+    )
+  })
+
   return (
    <section id="stacks" className="min-h-screen px-4 flex flex-col">
     <div className="mb-8">
@@ -38,10 +47,10 @@ export default function Stacks() {
           These are the main technologies used, but always exploring and learning new ones.
         </p>
       </div>
-    <div>
-
+    <div className="mb-8 text-center grid grid-cols-4 gap-4">    
+      {stackMenu}
     </div>
-    <div className="text-center grid grid-cols-3 md:grid-cols-4 gap-4 flr">
+    <div className="h-full text-center grid grid-cols-4 gap-4">
       {stacks}
     </div>
     

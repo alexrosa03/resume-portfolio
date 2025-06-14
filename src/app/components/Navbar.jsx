@@ -1,17 +1,24 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+"use client"
+
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'About Me', href: '#', current: true },
-  { name: 'Experience', href: '#', current: false },
-  { name: 'Stacks', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Mentors', href: '#', current: false },
+  { name: 'About Me', href: '#about', current: true },
+  { name: 'Experience', href: '#experience', current: false },
+  { name: 'Stacks', href: '#stacks', current: false },
+  { name: 'Projects', href: '#projects', current: false },
+  { name: 'Mentors', href: '#mentors', current: false },
 ]
 
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(' ')
-// }
+function handleNavClick(e, href) {
+  e.preventDefault();
+  const id = href.replace('#', '');
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 export default function Navbar() {
   return (
@@ -35,7 +42,8 @@ export default function Navbar() {
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
-                    className={'rounded-md px-3 py-2 text-lg'}
+                    className="rounded-md px-3 py-2 text-lg"
+                    onClick={e => handleNavClick(e, item.href)}
                   >
                     {item.name}
                   </a>
@@ -45,7 +53,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      
 
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pt-2 pb-3">
@@ -55,7 +62,8 @@ export default function Navbar() {
               as="a"
               href={item.href}
               aria-current={item.current ? 'page' : undefined}
-              className={'block rounded-md px-3 py-2 text-base font-medium'}
+              className="block rounded-md px-3 py-2 text-base font-medium"
+              onClick={e => handleNavClick(e, item.href)}
             >
               {item.name}
             </DisclosureButton>

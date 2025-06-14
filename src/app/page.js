@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
 import Stacks from "./components/Stacks";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <AboutMe />
       <Experience />
       <Stacks />
+      <Footer/>
     </header>
   );
 }
