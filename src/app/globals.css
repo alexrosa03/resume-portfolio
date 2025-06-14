@@ -23,5 +23,34 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  color: #ededed
+  font-size: 24px;
+  color: #ededed;
+}
+
+@media (min-width: 640px) {
+    section {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        max-width: 768px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+  section {
+      max-width: 1280px;
+      display: flex;
+      justify-content: center;
+  }
 }
