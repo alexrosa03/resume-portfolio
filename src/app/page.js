@@ -1,12 +1,16 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
+import Experience from "./components/Experience";
+import Stacks from "./components/Stacks";
 
 export default function Home() {
   return (
-    <header className="w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <header className="w-full mx-auto max-w-7xl sm:px-6 lg:px-8">
       <Navbar />
       <AboutMe />
+      <Experience />
+      <Stacks />
     </header>
   );
 }

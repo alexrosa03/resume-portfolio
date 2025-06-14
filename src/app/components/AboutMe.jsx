@@ -8,7 +8,7 @@ export default function AboutMe() {
           <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
             Alexis B. Dela Rosa
           </h1>
-          <h2 className="text-2xl sm:text-2xl md:text-3xl xl:text-5xl">
+          <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-3xl">
             FULL-STACK ENGINEER
           </h2>
           <p className="text-base sm:text-lg mt-6">
