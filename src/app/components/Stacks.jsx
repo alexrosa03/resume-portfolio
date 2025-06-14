@@ -5,9 +5,7 @@ import stack from "../stack.js"
 import { MenuItems } from "@headlessui/react";
 
 function getTechStack(selectedStack) {
-  console.log(selectedStack)
   const array = stack.tech_stack[selectedStack];
-  console.log('hi',array)
   return array.map((tech) => (
     <div
       key={tech[0]}
@@ -23,7 +21,6 @@ export default function Stacks() {
   const [stacks, setStacks] = useState(getTechStack('Frontend'));
 
   function handleStackChange(selectedStack) {
-    console.log(selectedStack)
     setStacks(getTechStack(selectedStack));
   }
 
