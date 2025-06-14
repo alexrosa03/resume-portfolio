@@ -16,7 +16,7 @@ export default function Stacks() {
       return (
         <div
           key={tech[0]}
-          className="block max-w-sm h-32 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          className="block max-w-sm h-32 border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
           <img className="w-16 h-16 object-contain mx-auto mt-4" src={tech[1]}></img>
           <p>{tech[0]}</p>
