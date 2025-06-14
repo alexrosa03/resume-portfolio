@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import stack from "../stack.js"
-import { MenuItems } from "@headlessui/react";
 
 function getTechStack(selectedStack) {
   const array = stack.tech_stack[selectedStack];
@@ -35,8 +34,8 @@ export default function Stacks() {
   })
 
   return (
-   <section id="stacks" className="min-h-screen px-4 flex flex-col">
-    <div className="mb-8">
+    <section id="stacks" className="  min-h-screen px-4 flex flex-col">
+      <div className="mb-8">
         <h2 className="text-2xl font-bold sm:text-2xl md:text-3xl xl:text-5xl">
           Stacks
         </h2>
@@ -44,13 +43,12 @@ export default function Stacks() {
           These are the main technologies used, but always exploring and learning new ones.
         </p>
       </div>
-    <div className="mb-8 text-center grid grid-cols-4 gap-4">    
-      {stackMenu}
-    </div>
-    <div className="h-full text-center grid grid-cols-4 gap-4">
-      {stacks}
-    </div>
-    
-  </section>
+      <div className="mb-8 text-center grid grid-cols-4 gap-4">    
+        {stackMenu}
+      </div>
+      <div className="text-center grid grid-cols-4 gap-4 grid-rows-3">
+        {stacks}
+      </div>
+    </section>
   );
 }

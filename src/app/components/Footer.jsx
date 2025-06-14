@@ -7,7 +7,7 @@ export default function Footer(){
     <div className="w-full mx-auto max-w-screen-xl p-2 sm:flex sm:items-center sm:justify-between">
       <span className="text-md text-gray-400">
         <p>Alexis Dela Rosa</p>
-        <p>09562293304</p>
+        <p>+63 9562293304</p>
         <p>delarosauberstrike@gmail.com</p>
       </span>
       <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-50 sm:mt-0">

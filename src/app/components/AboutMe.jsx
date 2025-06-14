@@ -12,10 +12,10 @@ export default function AboutMe() {
             FULL-STACK ENGINEER
           </h2>
           <p className="text-base sm:text-lg mt-6">
-            I'm Alex, a dedicated software engineer with a passion for writing clean, 
-            maintainable code and building practical solutions. I enjoy working with modern 
-            technologies, collaborating with teams, and constantly learning new things to grow 
-            as a developer.
+            I'm Alex, a dedicated software engineer, with a passion<br/>
+            for writing clean, maintainable code and building practical solutions.<br/>
+            I enjoy working with modern technologies, collaborating with teams, <br/>
+            and constantly learning new things to grow as a developer<br/>
           </p>
         </div>
         <div className="flex justify-center">
