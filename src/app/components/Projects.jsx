@@ -19,10 +19,12 @@ export default function Projects(){
       <SlideInSection direction="up">
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="w-full bg-gray-700 rounded-lg shadow-sm">
-            <img src={images[0]} alt="Project 1" className="w-full h-64 object-cover rounded-t-lg mb-4" />
-            <div className="p-1">
-              <h3 className="text-lg font-semibold mb-2 text-center"><a href="https://www.arma-ph.net/">PJSF Website</a></h3>
-            </div>
+            <a href="https://www.arma-ph.net/">
+              <img src={images[0]} alt="Project 1" className="w-full h-64 object-cover rounded-t-lg mb-4" />
+              <div className="p-1">
+                <h3 className="text-lg font-semibold mb-2 text-center">PJSF Website</h3>
+              </div>
+            </a>
           </div>
           <div className=" bg-gray-700 rounded-lg shadow-sm">
             <img src={images[1]} alt="Project 2" className="w-full h-64 object-cover rounded-t-lg mb-4" />
