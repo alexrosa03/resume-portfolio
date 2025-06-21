@@ -1,4 +1,6 @@
-"use client"
+'use client'
+
+import SlideInSection from "./SlideInComponent.jsx";
 
 import { useState } from "react";
 import stack from "../stack.js"
@@ -46,9 +48,11 @@ export default function Stacks() {
       <div className="mb-8 text-center grid grid-cols-4 gap-4">    
         {stackMenu}
       </div>
+      <SlideInSection direction="up">
       <div className="text-center grid grid-cols-4 gap-4 grid-rows-3">
         {stacks}
       </div>
+      </SlideInSection>
     </section>
   );
 }

@@ -1,0 +1,39 @@
+/* Base: hidden + animated */
+.slideIn {
+  opacity: 0;
+  transition: transform 1.5s ease-out, opacity 0.6s ease-out;
+  will-change: transform, opacity;
+  /* transform: translateY(-100px); */
+}
+
+/* Direction offsets */
+.slideIn.right {
+  transform: translateX(100px);
+}
+
+.slideIn.left {
+  transform: translateX(-100px);
+}
+
+.slideIn.up {
+  transform: translateY(100px);
+}
+
+.slideIn.down {
+  transform: translateY(-100px);
+}
+
+/* Active state: reset to normal position */
+.slideIn.active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-delay: 0.7s;
+}
+
+@media (max-width: 768px) {
+  .slideIn {
+    opacity: 1 !important;   /* show immediately */
+    transform: translate(0, 0) !important; /* no offset */
+    transition: none !important;  /* no animation */
+  }
+}
