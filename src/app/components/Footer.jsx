@@ -4,7 +4,7 @@
 export default function Footer(){
   return (
   <footer className="rounded-lg shadow-sm bg-[var(--background)]">
-    <div className="w-full mx-auto max-w-screen-xl p-2 sm:flex sm:items-center sm:justify-between">
+    <div className="w-full mx-auto pt-2 pb-2 max-w-screen-xl sm:flex sm:items-center sm:justify-between">
       <span className="text-md text-gray-400">
         <p>Alexis Dela Rosa</p>
         <p>+63 9562293304</p>
