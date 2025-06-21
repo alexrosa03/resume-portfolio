@@ -1,9 +1,10 @@
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
 import Stacks from "./components/Stacks";
 import Footer from "./components/Footer";
+import Projects from "./components/Projects";
+import Mentors from "./components/Mentors";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <AboutMe />
       <Experience />
       <Stacks />
+      <Projects />
+      <Mentors />
       <Footer/>
     </header>
   );
