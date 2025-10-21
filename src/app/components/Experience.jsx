@@ -1,4 +1,5 @@
 import SlideInSection from "./SlideInComponent"
+import GitHubCalendar from 'react-github-calendar';
 
 export default function Experience(){
   return (
@@ -51,6 +52,12 @@ export default function Experience(){
           </SlideInSection>
         </li>
       </ol>
+      <div className="mb-8 pt-6">
+        <h3 className="text-xl font-bold sm:text-xl md:text-2xl xl:text-4xl">
+          Github Contributions
+        </h3>
+      </div>
+      <GitHubCalendar username="alexrosa03" />
     </section>
 
 
