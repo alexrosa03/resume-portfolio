@@ -57,7 +57,9 @@ export default function Experience(){
           Github Contributions
         </h3>
       </div>
-      <GitHubCalendar username="alexrosa03" colorScheme="dark" />
+      <SlideInSection direction="left">  
+        <GitHubCalendar username="alexrosa03" colorScheme="dark" />
+      </SlideInSection>
     </section>
 
 
